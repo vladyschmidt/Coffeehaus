@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Coffeehaus",
+    "version": "0.9",
+    
+    "author": "Schmidt",
+    "description": "An extension that aims to boost your productivity.",
+
+    "chrome_settings_overrides": {
+        "homepage": "./homepage/index.html"
+    },
+
+    "chrome_url_overrides": {
+        "newtab": "./homepage/index.html"
+    },
+
+    "permissions": [
+        "search",
+        "topSites"
+    ]
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffeehaus</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main>
+    <section class="hide clock"></section>
+    <section class="hide search">
+      <div class="input-control">
+        <input id="search-input" type="text">
+        <label for="search-input">Search...</label>
+      </div>
+    </section>
+    <section class="hide bookmarks"></section>
+  </main>
+
+  <aside class="pexels-links">
+    <a href="https://www.pexels.com">Photos provided by Pexels</a>
+  </aside>
+
+  <aside class="tasks">
+    <div class="task-input-form">
+      <div class="input-control">
+        <input id="task-input" type="text">
+        <label for="task-input">Add tasks for the day...</label>
+      </div>
+      <div>
+        <button>Add</button>
+      </div>
+    </div>
+    <div class="task-list">
+      <div class="task">
+        <p>There are no tasks for today!</p>
+      </div>
+    </div>
+  </aside>
+
+  <script defer src="./scripts/clock.js"></script>
+  <script defer src="./scripts/search.js"></script>
+  <script defer src="./scripts/bookmarks.js"></script>
+  <script defer src="./scripts/background.js"></script>
+  <script defer src="./scripts/tasks.js"></script>
+  <script defer src="./scripts/main.js"></script>
+</body>
+</html>

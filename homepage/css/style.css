@@ -1,0 +1,179 @@
+:root {
+  --background-dark: #333333;
+  --text-light-gray: #eeeeee;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  color: var(--text-light-gray);
+  background-image: url('https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-color: var(--background-dark);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::after {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, 0.5));
+  z-index: 1;
+  content: '';
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.clock {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.clock h1 {
+  margin: 0;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+}
+
+.bookmarks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookmarks .cell {
+  margin: 0 .5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.bookmarks .cell:visited {
+  color: inherit;
+}
+
+.bookmarks .cell .icon {
+  width: 50px;
+  height: 50px;
+  padding: .75rem;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+}
+
+.bookmarks .cell img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bookmarks .cell h4 {
+  margin: .25rem;
+}
+
+.tasks {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 25vw;
+  z-index: 10;
+}
+
+.task-input-form {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+}
+
+.tasks .input-control {
+  margin: 0;
+}
+
+.task-input-form button {
+  padding: .5rem 1rem;
+  border: none;
+  background-color: aqua;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.tasks .task-list {
+  margin-top: .5rem;
+  padding: .5rem 1rem;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+}
+
+.pexels-links {
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+  z-index: 10;
+}
+
+.pexels-links a:visited {
+  color: inherit;
+}
+
+/* -- Utilities */
+.hide {
+  display: none;
+}
+
+.input-control {
+  position: relative;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.input-control input {
+  width: 100%;
+  font-size: 1.25rem;
+  color: var(--text-light-gray);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.input-control input:focus {
+  outline: none;
+}
+
+.input-control input:focus ~ label {
+  opacity: 0;
+}
+
+.input-control label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1.25rem;
+  transition: all .2s;
+  cursor: text;
+}
